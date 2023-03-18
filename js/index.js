@@ -223,7 +223,6 @@ async function getMealDetails(mealID) {
 
   $('.loading').addClass('d-none')
   displayMealDetails(response.meals[0])
-  console.log(response.meals[0]);
   closeNav()
 }
 
@@ -331,7 +330,6 @@ async function searchByChar(char) {
 
   let response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${char}`)
   response = await response.json()
-  console.log(response);
   response.meals && showMeals(response.meals);
   $('.loading').addClass('d-none')
 
